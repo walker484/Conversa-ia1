@@ -1,0 +1,21 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+
+import { getFirestore } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js";
+
+import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "COLOQUE_SUA_API_KEY",
+  authDomain: "walker-midia.firebaseapp.com",
+  projectId: "walker-midia",
+  storageBucket: "walker-midia.firebasestorage.app",
+  messagingSenderId: "223143706690",
+  appId: "1:223143706690:web:3c9e81a0d21173a59caddb"
+};
+
+const app = initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);
+export const auth = getAuth(app);
+
+console.log("Firebase inicializado!");
